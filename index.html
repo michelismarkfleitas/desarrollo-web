@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF DevStudio | Desarrollo Web Seguro y a Medida</title>
+    <meta name="description" content="Estudio de desarrollo web especializado en Python, Django y FastAPI. Creamos aplicaciones seguras, escalables y a medida para tu negocio.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">MF<span>DevStudio</span></a>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#casos">Casos</a></li>
+                <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">🚀 Estudio de desarrollo web</span>
+                <h1>Creamos webs <span class="highlight">seguras</span> que hacen crecer tu negocio</h1>
+                <p>Somos un estudio especializado en desarrollo web con Python, Django y FastAPI. Diseñamos, construimos y protegemos aplicaciones a medida que se adaptan a tus objetivos.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/535XXXXXXXX?text=Hola%2C%20quiero%20cotizar%20un%20proyecto%20web" 
+                       target="_blank" rel="noopener" class="btn btn-primary">
+                        💬 Hablemos de tu proyecto
+                    </a>
+                    <a href="#soluciones" class="btn btn-secondary">Ver soluciones</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>6+</strong>
+                        <span>Años de experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <strong>50+</strong>
+                        <span>Proyectos entregados</span>
+                    </div>
+                    <div class="stat">
+                        <strong>100%</strong>
+                        <span>Enfoque en seguridad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-card">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">mfdevstudio — zsh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> python manage.py runserver</p>
+                        <p class="success">✓ Sistema iniciado correctamente</p>
+                        <p><span class="prompt">$</span> git push origin main</p>
+                        <p class="success">✓ Desplegado en producción</p>
+                        <p><span class="prompt">$</span> python security_audit.py</p>
+                        <p class="success">✓ 0 vulnerabilidades detectadas</p>
+                        <p class="cursor">█</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCIONES (¿Qué tipo de proyecto necesitas?) -->
+    <section class="section" id="soluciones">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Soluciones</span>
+                <h2>¿Qué tipo de proyecto necesitas?</h2>
+                <p>Elige la solución que mejor se adapte a tu negocio. Todas incluyen seguridad desde el primer día.</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🌐</div>
+                    <h3>Web Corporativa</h3>
+                    <p>Presencia digital profesional para tu empresa. Diseño moderno, rápido y optimizado para convertir visitantes en clientes.</p>
+                    <ul>
+                        <li>✓ Diseño a medida</li>
+                        <li>✓ SEO técnico</li>
+                        <li>✓ Panel de administración</li>
+                    </ul>
+                    <a href="https://wa.me/535XXXXXXXX?text=Quiero%20una%20web%20corporativa" target="_blank" rel="noopener" class="solution-link">Cotizar →</a>
+                </div>
+                <div class="solution-card featured">
+                    <span class="featured-badge">Más solicitado</span>
+                    <div class="solution-icon">⚙️</div>
+                    <h3>Aplicación Web a Medida</h3>
+                    <p>Sistemas internos, dashboards y plataformas que automatizan procesos de tu negocio y ahorran horas de trabajo.</p>
+                    <ul>
+                        <li>✓ Backend Django/FastAPI</li>
+                        <li>✓ Base de datos PostgreSQL</li>
+                        <li>✓ Roles y permisos</li>
+                    </ul>
+                    <a href="https://wa.me/535XXXXXXXX?text=Quiero%20una%20aplicaci%C3%B3n%20web%20a%20medida" target="_blank" rel="noopener" class="solution-link">Cotizar →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🔌</div>
+                    <h3>API REST para tu Negocio</h3>
+                    <p>Conectamos tus sistemas con APIs seguras. Integración con CRM, ERP, pasarelas de pago y cualquier servicio externo.</p>
+                    <ul>
+                        <li>✓ Autenticación JWT</li>
+                        <li>✓ Documentación Swagger</li>
+                        <li>✓ Alto rendimiento</li>
+                    </ul>
+                    <a href="https://wa.me/535XXXXXXXX?text=Necesito%20una%20API%20REST" target="_blank" rel="noopener" class="solution-link">Cotizar →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🤖</div>
+                    <h3>Automatización & Scraping</h3>
+                    <p>Extraemos y procesamos datos de múltiples fuentes. Automatizamos tareas repetitivas para que tu equipo se enfoque en lo importante.</p>
+                    <ul>
+                        <li>✓ Web scraping con Playwright</li>
+                        <li>✓ Procesamiento de datos</li>
+                        <li>✓ Reportes automáticos</li>
+                    </ul>
+                    <a href="https://wa.me/535XXXXXXXX?text=Quiero%20automatizar%20procesos" target="_blank" rel="noopener" class="solution-link">Cotizar →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS TÉCNICOS -->
+    <section class="section section-dark" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios</span>
+                <h2>Todo lo que hacemos por tu web</h2>
+                <p>Cubrimos el ciclo completo: desde la idea hasta el mantenimiento continuo.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🐍</div>
+                    <h3>Desarrollo Backend</h3>
+                    <p>Python, Django, FastAPI. Aplicaciones robustas, escalables y con código limpio.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Frontend Moderno</h3>
+                    <p>HTML, CSS, JavaScript y React. Interfaces atractivas, rápidas y adaptadas a móvil.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Seguridad Web</h3>
+                    <p>Protección contra OWASP Top 10, hardening de servidores y auditorías de seguridad.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🗄️</div>
+                    <h3>Bases de Datos</h3>
+                    <p>Diseño y optimización con PostgreSQL y MySQL. Consultas eficientes y datos seguros.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Despliegue & Servidores</h3>
+                    <p>Configuración en Linux, Docker, Nginx y Apache. Tu web en producción sin dolores de cabeza.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Mantenimiento</h3>
+                    <p>Actualizaciones, backups, monitoreo y soporte continuo para que todo funcione siempre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section" id="proceso">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Metodología</span>
+                <h2>Así trabajamos tu proyecto</h2>
+                <p>Un proceso claro, transparente y orientado a resultados.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Análisis</h3>
+                    <p>Escuchamos tus necesidades, definimos objetivos y alcance del proyecto.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Diseño</h3>
+                    <p>Creamos la estructura visual y la experiencia de usuario (UX/UI).</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Desarrollo</h3>
+                    <p>Codificamos con las mejores prácticas y seguridad integrada desde el inicio.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Pruebas</h3>
+                    <p>Verificamos funcionamiento en todos los navegadores y dispositivos.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3>Lanzamiento</h3>
+                    <p>Desplegamos en producción y configuramos dominios y seguridad.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">06</div>
+                    <h3>Mantenimiento</h3>
+                    <p>Actualizaciones, backups y soporte continuo para tu tranquilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section class="section section-dark" id="casos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Casos de éxito</span>
+                <h2>Proyectos que hablan por nosotros</h2>
+                <p>Una muestra de lo que hemos construido para nuestros clientes.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                        <span>⚙️</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema Interno — ETECSA</h3>
+                        <p>Desarrollo de aplicación web con Django para gestión de procesos internos. Incluye panel de administración, roles de usuario y reportes automatizados.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                        <span>🔌</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>API REST Segura — Embajada</h3>
+                        <p>API con autenticación JWT para gestión de infraestructura TI. Documentación automática con Swagger y despliegue en servidor Linux.</p>
+                        <div class="project-tags">
+                            <span>FastAPI</span>
+                            <span>JWT</span>
+                            <span>Swagger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <span>🤖</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Automatización con Scraping</h3>
+                        <p>Sistema que extrae datos de múltiples fuentes web con Playwright y los estructura en PostgreSQL, reduciendo 70% el trabajo manual.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Playwright</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="section" id="nosotros">
+        <div class="container about-container">
+            <div class="about-text">
+                <span class="section-tag">Sobre nosotros</span>
+                <h2>Un estudio con visión de seguridad</h2>
+                <p>En <strong>MF DevStudio</strong> combinamos desarrollo web de alto nivel con experiencia real en ciberseguridad y redes. Eso nos permite construir aplicaciones no solo funcionales y rápidas, sino <strong>blindadas desde el primer día</strong>.</p>
+                <p>Venimos del mundo de la infraestructura TI: administración de redes, firewalls, análisis forense y monitoreo con SIEM. Esa experiencia la aplicamos a cada proyecto web que entregamos.</p>
+                <div class="about-skills">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>FastAPI</span>
+                    <span>Playwright</span>
+                    <span>PostgreSQL</span>
+                    <span>Linux</span>
+                    <span>Ciberseguridad</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-avatar">MF</div>
+                <h3>MF DevStudio</h3>
+                <p class="role">Desarrollo Web · Seguridad · Automatización</p>
+                <ul class="about-list">
+                    <li>✅ +6 años en TI</li>
+                    <li>✅ Especialistas en backend</li>
+                    <li>✅ Seguridad integrada</li>
+                    <li>✅ Disponibles remoto/presencial</li>
+                </ul>
+                <a href="https://wa.me/535XXXXXXXX?text=Hola%2C%20quiero%20hablar%20con%20MF%20DevStudio" 
+                   target="_blank" rel="noopener" class="btn btn-primary btn-block">
+                    💬 Contactar ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-dark" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Preguntas frecuentes</span>
+                <h2>Resolvemos tus dudas</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>¿Cuánto tarda un proyecto web?</h3>
+                    <p>Depende de la complejidad. Una web corporativa puede tardar 2-3 semanas. Una aplicación a medida, entre 4 y 8 semanas. Te damos un cronograma claro desde el inicio.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cuánto cuesta una página web?</h3>
+                    <p>Cada proyecto es único. Escríbenos por WhatsApp y te damos una cotización personalizada sin compromiso en menos de 24 horas.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Ofrecen mantenimiento después del lanzamiento?</h3>
+                    <p>Sí. Incluimos planes de mantenimiento con actualizaciones, backups, monitoreo de seguridad y soporte técnico continuo.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Trabajan con clientes fuera de Cuba?</h3>
+                    <p>Sí, trabajamos en modalidad remota con clientes de cualquier país. Coordinamos horarios y métodos de pago según tu ubicación.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Puedo actualizar mi web yo mismo?</h3>
+                    <p>Sí. Entregamos paneles de administración intuitivos y te enseñamos a gestionar el contenido de tu sitio sin depender de un programador.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué tecnologías utilizan?</h3>
+                    <p>Trabajamos principalmente con Python (Django, FastAPI), PostgreSQL, HTML, CSS, JavaScript y React. También administramos servidores Linux y Docker.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="contacto">
+        <div class="container">
+            <h2>¿Listo para llevar tu negocio al siguiente nivel?</h2>
+            <p>Cuéntanos tu idea y te damos una cotización sin compromiso en menos de 24 horas.</p>
+            <a href="https://wa.me/535XXXXXXXX?text=Hola%2C%20quiero%20cotizar%20mi%20proyecto%20web" 
+               target="_blank" rel="noopener" class="btn btn-whatsapp-large">
+                💬 Escríbenos por WhatsApp
+            </a>
+            <p class="cta-small">Respuesta rápida · Sin compromiso · Presupuesto gratis</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <a href="#" class="logo">MF<span>DevStudio</span></a>
+                <p>Desarrollo web seguro y a medida.</p>
+            </div>
+            <div>
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#soluciones">Web Corporativa</a></li>
+                    <li><a href="#soluciones">Aplicaciones a Medida</a></li>
+                    <li><a href="#soluciones">APIs REST</a></li>
+                    <li><a href="#soluciones">Automatización</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li>📱 WhatsApp: +53 5XXX XXXX</li>
+                    <li>📍 Artemisa / La Habana, Cuba</li>
+                    <li>💼 LinkedIn: /in/michel-fleitas</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 MF DevStudio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
