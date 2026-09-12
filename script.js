@@ -87,4 +87,11 @@ async function loadIcon(el) {
 }
 
 // Cargar todos los iconos con [data-icon]
-document.querySelectorAll
+document.querySelectorAll('[data-icon]').forEach(loadIcon);
+
+// ==========================================
+// CONSOLA
+// ==========================================
+
+console.log('%cMF DevStudio', 'font-size: 20px; font-weight: bold; color: #6366f1;');
+console.log('%c¿Necesitas una web profesional? Escríbenos por WhatsApp 💬', 'font-size: 14px; color: #64748b;');
