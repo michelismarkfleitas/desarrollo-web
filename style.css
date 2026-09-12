@@ -1,3 +1,6 @@
+/* ==========================================
+   RESET
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +18,8 @@
     --bg: #ffffff;
     --bg-soft: #f8fafc;
     --border: #e2e8f0;
+    --icon-color: #38bdf8;
+    --icon-color-hover: #0ea5e9;
 }
 
 html {
@@ -35,7 +40,9 @@ body {
     padding: 0 24px;
 }
 
-/* NAVBAR */
+/* ==========================================
+   NAVBAR
+   ========================================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -116,7 +123,9 @@ body {
     transition: 0.3s;
 }
 
-/* HERO */
+/* ==========================================
+   HERO
+   ========================================== */
 .hero {
     padding: 140px 0 80px;
     background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
@@ -241,7 +250,7 @@ body {
     color: var(--text-light);
 }
 
-/* TERMINAL CARD */
+/* TERMINAL */
 .terminal-card {
     background: var(--dark);
     border-radius: 16px;
@@ -297,7 +306,9 @@ body {
     51%, 100% { opacity: 0; }
 }
 
-/* SECTION */
+/* ==========================================
+   SECTION
+   ========================================== */
 .section {
     padding: 100px 0;
 }
@@ -347,7 +358,93 @@ body {
     margin: 0 auto;
 }
 
-/* SOLUCIONES */
+/* ==========================================
+   ICONOS SVG (compartido)
+   ========================================== */
+.service-icon,
+.solution-icon,
+.project-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.service-icon svg,
+.solution-icon svg,
+.project-icon svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================
+   SERVICIOS
+   ========================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background: var(--dark-2);
+    padding: 32px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(56, 189, 248, 0.1);
+    margin-bottom: 1rem;
+    padding: 16px;
+}
+
+.service-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.service-card:hover .service-icon {
+    background: rgba(56, 189, 248, 0.2);
+    color: var(--icon-color-hover);
+    transform: translateY(-4px);
+}
+
+.service-card:hover .service-icon svg {
+    transform: scale(1.15) rotate(-5deg);
+    animation: icon-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+    0%, 100% { transform: scale(1.15) rotate(-5deg); }
+    50%      { transform: scale(1.25) rotate(-5deg); }
+}
+
+.service-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.service-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   SOLUCIONES
+   ========================================== */
 .solutions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -387,15 +484,18 @@ body {
 }
 
 .solution-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    display: inline-block;
     width: 70px;
     height: 70px;
-    line-height: 70px;
-    text-align: center;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    padding: 18px;
     border-radius: 16px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.solution-card:hover .solution-icon {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+    transform: scale(1.08) rotate(-3deg);
 }
 
 .solution-card h3 {
@@ -433,43 +533,9 @@ body {
     color: var(--primary-dark);
 }
 
-/* SERVICIOS */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
-
-.service-card {
-    background: var(--dark-2);
-    padding: 32px 24px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--primary);
-}
-
-.service-icon {
-    font-size: 2rem;
-    margin-bottom: 16px;
-}
-
-.service-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.service-card p {
-    color: #94a3b8;
-    font-size: 0.9rem;
-}
-
-/* PROCESO */
+/* ==========================================
+   PROCESO
+   ========================================== */
 .process-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -510,7 +576,9 @@ body {
     font-size: 0.9rem;
 }
 
-/* PROYECTOS */
+/* ==========================================
+   PROYECTOS
+   ========================================== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -535,7 +603,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
+}
+
+.project-icon {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.project-card:hover .project-icon {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1) rotate(-5deg);
+    animation: icon-pulse 1.5s ease-in-out infinite;
 }
 
 .project-info {
@@ -569,7 +652,9 @@ body {
     font-weight: 600;
 }
 
-/* SOBRE NOSOTROS */
+/* ==========================================
+   SOBRE NOSOTROS
+   ========================================== */
 .about-container {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
@@ -662,7 +747,9 @@ body {
     background: var(--bg-soft);
 }
 
-/* FAQ */
+/* ==========================================
+   FAQ
+   ========================================== */
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -692,7 +779,9 @@ body {
     font-size: 0.9rem;
 }
 
-/* CTA FINAL */
+/* ==========================================
+   CTA FINAL
+   ========================================== */
 .cta-final {
     padding: 100px 0;
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
@@ -753,7 +842,9 @@ body {
     position: relative;
 }
 
-/* FOOTER */
+/* ==========================================
+   FOOTER
+   ========================================== */
 .footer {
     background: var(--dark);
     color: #94a3b8;
@@ -805,7 +896,9 @@ body {
     font-size: 0.85rem;
 }
 
-/* RESPONSIVE */
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
 @media (max-width: 900px) {
     .hero-content,
     .about-container {

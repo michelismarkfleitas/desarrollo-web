@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
-        
+
         const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
@@ -47,33 +47,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ==========================================
-// ANIMACIONES AL HACER SCROLL
+// ICONOS SVG INLINE (Opción 3)
 // ==========================================
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+const iconCache = new Map();
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+async function loadIcon(el) {
+    const url = el.dataset.icon;
+    if (!url) return;
+
+    try {
+        // Cache para no repetir peticiones
+        if (!iconCache.has(url)) {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('No se pudo cargar ' + url);
+            iconCache.set(url, await res.text());
         }
-    });
-}, observerOptions);
 
-document.querySelectorAll('.solution-card, .service-card, .process-step, .project-card, .faq-item, .about-card, .section-header').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+        el.innerHTML = iconCache.get(url);
 
-// ==========================================
-// CONSOLA
-// ==========================================
+        // Normalizar el SVG para que herede el color del CSS
+        const svg = el.querySelector('svg');
+        if (svg) {
+            svg.removeAttribute('fill');
+            svg.removeAttribute('stroke');
+            svg.removeAttribute('width');
+            svg.removeAttribute('height');
+            svg.setAttribute('fill', 'none');
+            svg.setAttribute('stroke', 'currentColor');
+            svg.setAttribute('stroke-width', '2');
+            svg.setAttribute('stroke-linecap', 'round');
+            svg.setAttribute('stroke-linejoin', 'round');
+            svg.setAttribute('width', '100%');
+            svg.setAttribute('height', '100%');
+        }
+    } catch (err) {
+        console.error('Error cargando icono:', err);
+    }
+}
 
-console.log('%c🚀 MF DevStudio', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%c¿Necesitas una web profesional? Escríbenos por WhatsApp 💬', 'font-size: 14px; color: #64748b;');
+// Cargar todos los iconos con [data-icon]
+document.querySelectorAll
