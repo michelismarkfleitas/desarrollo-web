@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .m { fill: #000000; font-family: ui-monospace, 'Fira Code', 'Courier New', monospace; font-weight: 900; }
+      .k { fill: #9557FF; font-family: ui-monospace, 'Fira Code', 'Courier New', monospace; font-weight: 900; }
+    </style>
+  </defs>
+  <text x="50" y="72" font-size="70" text-anchor="middle">
+    <tspan class="m">m</tspan><tspan class="k">k</tspan>
+  </text>
+</svg>
