@@ -253,7 +253,7 @@ body {
     align-items: center;
     gap: 12px;
     text-align: left;
-    max-width: 180px;
+    max-width: 150px;
 }
 
 .stat > span:not(.stat-icon) {
