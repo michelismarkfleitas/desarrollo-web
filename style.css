@@ -905,6 +905,7 @@ body {
     height: 40px;
     width: auto;
     display: block;
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .footer h4 {
@@ -1014,6 +1015,7 @@ body {
     .footer-contact li {
         justify-content: center;
     }
+    
 
     .nav-links {
         position: fixed;
