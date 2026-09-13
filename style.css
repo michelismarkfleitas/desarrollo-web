@@ -51,12 +51,13 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
-    padding: 16px 0;
-    transition: box-shadow 0.3s;
+    padding: 12px 0;
+    transition: box-shadow 0.3s, padding 0.3s;
 }
 
 .navbar.scrolled {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
 }
 
 .nav-container {
@@ -65,15 +66,21 @@ body {
     align-items: center;
 }
 
+/* Logo (imagen PNG) */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--dark);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
+    line-height: 1;
+    padding: 0;
 }
 
-.logo span {
-    color: var(--primary);
+.logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -726,6 +733,7 @@ body {
     margin-bottom: 24px;
 }
 
+/* Lista del about con iconos check */
 .about-list {
     list-style: none;
     text-align: left;
@@ -733,8 +741,37 @@ body {
 }
 
 .about-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 8px 0;
     font-size: 0.95rem;
+    color: #fff;
+}
+
+.about-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    flex-shrink: 0;
+    color: #fff;
+    background: #4ade80;
+    border-radius: 50%;
+    box-sizing: content-box;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-check svg {
+    width: 100%;
+    height: 100%;
+}
+
+.about-card:hover .about-check {
+    transform: scale(1.15);
+    background: #22c55e;
 }
 
 .about-card .btn-primary {
@@ -864,6 +901,12 @@ body {
     margin-bottom: 12px;
 }
 
+.footer .logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .footer h4 {
     color: #fff;
     margin-bottom: 16px;
@@ -889,117 +932,56 @@ body {
     color: var(--accent);
 }
 
+/* Contacto del footer con iconos SVG */
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--accent);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-contact li:hover .footer-icon {
+    color: #4ade80;
+    transform: scale(1.15);
+}
+
+/* WhatsApp en su color */
+.footer-contact li:first-child .footer-icon {
+    color: #25D366;
+}
+
+/* Ubicación en ámbar */
+.footer-contact li:last-child .footer-icon {
+    color: #f59e0b;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
     text-align: center;
     font-size: 0.85rem;
-}
-
-.about-list {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 28px;
-}
-
-.about-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    font-size: 0.95rem;
-    color: #fff;
-}
-
-.about-check {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    padding: 4px;
-    flex-shrink: 0;
-    color: #fff;
-    background: #4ade80;
-    border-radius: 50%;
-    box-sizing: content-box;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.about-check svg {
-    width: 100%;
-    height: 100%;
-}
-
-.about-card:hover .about-check {
-    transform: scale(1.15);
-    background: #22c55e;
-}
-/* ==========================================
-   LOGO (navbar + footer)
-   ========================================== */
-.logo {
-    display: inline-flex;
-    align-items: center;      /* alinea imagen y texto a la misma altura */
-    gap: 10px;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--dark);
-    text-decoration: none;
-    letter-spacing: -0.5px;
-    line-height: 1;
-}
-
-.logo-img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    display: block;
-    flex-shrink: 0;
-}
-
-.logo-text span {
-    color: var(--primary);
-}
-
-/* Footer: logo en blanco */
-.footer .logo {
-    color: #fff;
-}
-
-.footer .logo-text span {
-    color: var(--accent);
-}
-
-.footer .logo-img {
-    width: 32px;
-    height: 32px;
-}
-.logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0;
-}
-
-.logo-img {
-    height: 42px;      /* ajusta a tu gusto */
-    width: auto;       /* mantiene proporción */
-    display: block;
-    object-fit: contain;
-}
-
-/* En el footer un poco más pequeño */
-.footer .logo-img {
-    height: 36px;
-}
-
-/* Responsive: más pequeño en móvil */
-@media (max-width: 600px) {
-    .logo-img {
-        height: 34px;
-    }
 }
 
 /* ==========================================
@@ -1027,6 +1009,10 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .footer-contact li {
+        justify-content: center;
     }
 
     .nav-links {
@@ -1084,5 +1070,13 @@ body {
 
     .stat strong {
         font-size: 1.5rem;
+    }
+
+    .logo-img {
+        height: 36px;
+    }
+
+    .footer .logo-img {
+        height: 32px;
     }
 }
