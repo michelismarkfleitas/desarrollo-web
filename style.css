@@ -935,6 +935,47 @@ body {
     transform: scale(1.15);
     background: #22c55e;
 }
+/* ==========================================
+   LOGO (navbar + footer)
+   ========================================== */
+.logo {
+    display: inline-flex;
+    align-items: center;      /* alinea imagen y texto a la misma altura */
+    gap: 10px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo-text span {
+    color: var(--primary);
+}
+
+/* Footer: logo en blanco */
+.footer .logo {
+    color: #fff;
+}
+
+.footer .logo-text span {
+    color: var(--accent);
+}
+
+.footer .logo-img {
+    width: 32px;
+    height: 32px;
+}
 
 /* ==========================================
    RESPONSIVE
