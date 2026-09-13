@@ -239,7 +239,7 @@ body {
     text-align: center;
 }
 
-/* HERO STATS (icono izquierda + texto 2 líneas, centrados) */
+/* HERO STATS (icono + texto) */
 .hero-stats {
     display: flex;
     gap: 32px;
@@ -1097,25 +1097,34 @@ body {
         font-size: 1rem;
     }
 
+    /* ===== STATS: 3 COLUMNAS COMPACTAS ===== */
     .hero-stats {
-        gap: 20px;
-        justify-content: center;
+        gap: 8px;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .stat {
-        max-width: 160px;
-        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        max-width: none;
+        flex: 1;
+        min-width: 0;
     }
 
     .stat > span:not(.stat-icon) {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+        line-height: 1.2;
+        word-break: break-word;
     }
 
     .stat-icon {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
         padding: 8px;
-        border-radius: 12px;
+        border-radius: 10px;
     }
 
     .logo-img {
@@ -1124,5 +1133,33 @@ body {
 
     .footer .logo-img {
         height: 32px;
+    }
+}
+
+/* ===== MÓVILES MUY PEQUEÑOS: 1 COLUMNA ===== */
+@media (max-width: 380px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+    }
+
+    .stat {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        flex: none;
+    }
+
+    .stat > span:not(.stat-icon) {
+        font-size: 0.9rem;
+    }
+
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+        padding: 9px;
+        border-radius: 12px;
     }
 }
